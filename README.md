@@ -1,10 +1,16 @@
 # Project 7 - WordPress Pentesting
 
-Time spent: 12 hours spent in total
-
-> Objective: Find, analyze, recreate, and document **five vulnerabilities** affecting an old version of WordPress
+Time spent: 15 hours spent in total
 
 ## Pentesting Report
+(Required) Authenticated Shortcode Tags Cross-Site Scripting (XSS)
+  - [ ] Summary: 
+    - Vulnerability types: XSS
+    - Tested in version: 4.2
+    - Fixed in version: 4.2.5
+  - [ ] GIF Walkthrough:
+  - [ ] Steps to recreate: 
+  - [ ] Affected source code: https://core.trac.wordpress.org/changeset/33499/branches/4.2
 
 1. (Required) Unauthenticated Stored Cross-Site Scripting (CWE-79)
   - [ ] Summary: Exploit was centered around the fact that there was no character length limit when storing messages in the database. The deafult 64kB limit for SQL DB's truncates input beyond 64 kB resulting in malformed URL's which gives access to insert JavaScript without permission.
@@ -17,7 +23,7 @@ Time spent: 12 hours spent in total
     - [ ] Insert JS payload: &lt;a title='x onmouseover=alert(unescape(/hello%20world/.source)) style=position:absolute;left:0;top:0;width:5000px;height:5000px +++'></a> where '+++' indicates some sequence of characters that pushes the command to above 64kB
     - [ ] Publish Post
   - [ ] Affected source code: https://core.trac.wordpress.org/changeset/32307/branches/4.2
-2. (Required) Authenticated Stored Cross-Site Scripting (CWE-79)
+2. (Required) Authenticated Stored Cross-Site Scripting (CWE-79) (CVE: 2015-5622)
   - [ ] Summary: Similiar to the last Cross-Site Scripting attack, this one also relies on writing some clever HTML with embedded JS to gain access to the server side of WordPress. This time, the vulnerability was within the preview feature rather the after actual posting to the site.
     - Vulnerability types: XSS
     - Tested in version: 4.2 
@@ -25,20 +31,12 @@ Time spent: 12 hours spent in total
   - [ ] GIF Walkthrough: ![](https://github.com/ConnorCason/CodePath-Week-7-WordPress/blob/master/Vuln_2.gif)
   - [ ] Steps to recreate: 
     - [ ] Sign into WordPress as an admin
-    - [ ] Create a new post and fill the message body with the payload: &lt;<a href="[caption code=">]</a><a title=" onmouseover=alert('test')  ">link</a>
+    - [ ] Create a new post and fill the message body with the payload: &lt;a href="[caption code=">]</a>&lt;a title=" onmouseover=alert('test')  ">link&lt;/a>
     - [ ] Rather than publishing, preview the post
     - [ ] By hovering your mouse over the link (onmouseover) the payload is instructed to execute the JS script to compromise the system
   - [ ] Affected source code: https://core.trac.wordpress.org/log/branches/4.2?rev=33382&stop_rev=32430
-3. (Required) Vulnerability Name or ID
-  - [ ] Summary: 
-    - Vulnerability types:
-    - Tested in version:
-    - Fixed in version: 
-  - [ ] GIF Walkthrough: 
-  - [ ] Steps to recreate: 
-  - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
-1. (Optional) Vulnerability Name or ID
+3. 
+4. (Optional) Vulnerability Name or ID
   - [ ] Summary: 
     - Vulnerability types:
     - Tested in version:
