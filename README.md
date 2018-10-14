@@ -7,15 +7,17 @@ Time spent: **X** hours spent in total
 ## Pentesting Report
 
 1. (Required) Vulnerability Name or ID
-  - [ ] Summary: Exploit was centered around the fact that there was no character length
+  - [ ] Summary: Exploit was centered around the fact that there was no character length limit when storing messages in the database. The deafult 64kB limit for SQL DB's truncates input beyond 64 kB resulting in malformed URL's which gives access to insert JavaScript without permission.
     - Vulnerability types: XSS
     - Tested in version: 4.2
     - Fixed in version: 4.2.1
   - [ ] GIF Walkthrough: ![](https://github.com/ConnorCason/CodePath-Week-7-WordPress/blob/master/Vuln_1.gif)
   - [ ] Steps to recreate: 
+    - [ ] Sign into WordPress as an admin
+    - [ ] Insert JS payload: &lt;a title='x onmouseover=alert(unescape(/hello%20world/.source)) style=position:absolute;left:0;top:0;width:5000px;height:5000px +++'></a> where '+++' indicates some sequence of characters that pushes the command to above 64kB
+    - [ ] Publish Post
   - [ ] Affected source code: https://core.trac.wordpress.org/changeset/32307/branches/4.2
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
-1. (Required) Vulnerability Name or ID
+2. (Required) Vulnerability Name or ID
   - [ ] Summary: 
     - Vulnerability types:
     - Tested in version:
