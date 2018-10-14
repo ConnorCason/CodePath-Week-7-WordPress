@@ -7,13 +7,13 @@ Time spent: **X** hours spent in total
 ## Pentesting Report
 
 1. (Required) Vulnerability Name or ID
-  - [ ] Summary: 
-    - Vulnerability types:
-    - Tested in version:
-    - Fixed in version: 
-  - [ ] GIF Walkthrough: 
+  - [ ] Summary: Exploit was centered around the fact that there was no character length
+    - Vulnerability types: XSS
+    - Tested in version: 4.2
+    - Fixed in version: 4.2.1
+  - [ ] GIF Walkthrough: ![](https://github.com/ConnorCason/CodePath-Week-7-WordPress/blob/master/Vuln_1.gif)
   - [ ] Steps to recreate: 
-  - [ ] Affected source code:
+  - [ ] Affected source code: https://core.trac.wordpress.org/changeset/32307/branches/4.2
     - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
 1. (Required) Vulnerability Name or ID
   - [ ] Summary: 
