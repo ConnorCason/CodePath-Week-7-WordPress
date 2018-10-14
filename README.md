@@ -40,24 +40,7 @@ Time spent: 15 hours spent in total
     - [ ] By hovering your mouse over the link (onmouseover) the payload is instructed to execute the JS script to compromise the system
   - [ ] Affected source code: https://core.trac.wordpress.org/log/branches/4.2?rev=33382&stop_rev=32430
   
-4. (Optional) Vulnerability Name or ID
-  - [ ] Summary: 
-    - Vulnerability types:
-    - Tested in version:
-    - Fixed in version: 
-  - [ ] GIF Walkthrough: 
-  - [ ] Steps to recreate: 
-  - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
-1. (Optional) Vulnerability Name or ID
-  - [ ] Summary: 
-    - Vulnerability types:
-    - Tested in version:
-    - Fixed in version: 
-  - [ ] GIF Walkthrough: 
-  - [ ] Steps to recreate: 
-  - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php) 
+  
 
 ## Assets
 
